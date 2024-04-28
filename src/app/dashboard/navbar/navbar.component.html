@@ -1,0 +1,21 @@
+<!-- navbar.component.html -->
+
+<nav class="navbar">
+  <ul class="navbar-nav">
+    <div>
+      <li class="nav-item">
+        <a routerLink="" routerLinkActive="active">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/add-product" routerLinkActive="active">Add Products</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/figma-page" routerLinkActive="active">Figma Page</a>
+      </li>
+    </div>
+
+    <li class="nav-item">
+      <a routerLink="/logout" (click)="logout()">Logout</a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,38 @@
+<!-- src/app/product-list/product-list.component.html -->
+
+<div class="table-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <!-- <th>Images</th> -->
+        <th>Brand</th>
+        <th>Tags</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }}</td>
+        <!-- <td>
+          <div *ngFor="let image of product.images">
+            <img [src]="image" alt="Product Image" />
+          </div>
+        </td> -->
+        <td>{{ product.brand }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let tag of product.tags">{{ tag }}</li>
+          </ul>
+        </td>
+        <td>
+          <button (click)="deleteProduct(product.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
